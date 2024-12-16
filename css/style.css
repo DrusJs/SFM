@@ -97,13 +97,14 @@ ul {
 }
 
 .container {
-    max-width: 1880px;
+    max-width: 1980px;
     width: 100%;
     margin: 0 auto;
+    padding: 0 50px;
 }
 
 .container--small {
-    max-width: 1800px;
+    max-width: 1900px;
 }
 
 /* main style */
@@ -136,6 +137,7 @@ ul {
     font-weight: 400;
     line-height: 100%;
     color: var(--color-white);
+    min-width: 330px;
 }
 
 .text-primary {
@@ -290,6 +292,7 @@ input:checked + .checkbox-label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
 }
 
 .header__nav {
@@ -350,6 +353,7 @@ input:checked + .checkbox-label {
     border-radius: var(--border-radius-main);
     overflow: hidden;
     background-image: url(../images/main-picture.png);
+    padding:  20px;
 }
 
 .main-content {
@@ -360,6 +364,7 @@ input:checked + .checkbox-label {
 .main-section .title-wrapper {
     position: relative;
     z-index: 2;
+    left: 0;
 }
 
 .main-content-bg {
@@ -380,6 +385,8 @@ input:checked + .checkbox-label {
     width: 100%;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
 .main-section .flex-item {
@@ -447,6 +454,7 @@ input:checked + .checkbox-label {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 40px;
 }
 
 .about-video-section .small-banner {
@@ -470,8 +478,9 @@ input:checked + .checkbox-label {
 }
 
 .grid-wrapper--four-columns {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 50px 20px;
+    justify-items: center;
 }
 
 
@@ -509,21 +518,24 @@ input:checked + .checkbox-label {
 /* banner */
 
 .banner-section .container {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
 }
 
-.banner-section--reverse .container {
-    flex-direction: row-reverse;
+.banner-section--reverse .container .banner-right {
+    order: -1;
 }
 
 .banner-left {
     width: 100%;
-    min-height: 800px;
     position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    padding: 20px;
 }
 
 .banner-left__bg {
@@ -533,18 +545,23 @@ input:checked + .checkbox-label {
     top: 0;
     left: 0;
     z-index: -1;
-    max-width: 940px;
-    width: 100%;
-    height: 800px;
+    height: 100%;
     background-color: #222222;
     border-radius: 5px 0 0 5px;
     overflow: hidden;
     z-index: -1;
 }
 
+.banner-right {
+    width: 100%;
+    height: auto;
+}
+
 .banner-right img {
     border-radius: 0 5px 5px 0;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .banner-section--reverse .banner-left__bg {
@@ -584,8 +601,9 @@ input:checked + .checkbox-label {
 }
 
 .advantages-section .flex-item p {
-    margin-top: 460px;
+    margin-top: auto;
     line-height: 160%;
+    min-height: 115px;
 }
 
 .advantages-section .flex-item__bg {
@@ -593,6 +611,13 @@ input:checked + .checkbox-label {
     z-index: -1;
     top: 0;
     left: 0;
+    filter: brightness(80%);
+}
+
+.advantages-section .flex-item__bg img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 .advantages-section .flex-item__bg-trasparent {
@@ -1131,6 +1156,7 @@ input:checked + .checkbox-label {
     color: var(--color-white);
     font-size: 48px;
     line-height: 120%;
+    text-align: left;
 }
 
 .title-wrapper--opacity p {
@@ -1196,7 +1222,7 @@ input:checked + .checkbox-label {
     width: 100%;
     border-radius: var(--border-radius-main);
     background-color: var(--color-lightgrey);
-    padding: 14px 0 16px 30px;
+    padding: 14px 30px 16px 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1359,6 +1385,9 @@ input:checked + .checkbox-label {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .news-card__content {
@@ -1368,7 +1397,7 @@ input:checked + .checkbox-label {
     flex-direction: column;
     gap: 20px;
     border-radius: var(--border-radius-main);
-    height: 156px;
+    min-height: 160px;
 }
 
 .news-card__tags-wrapper {
@@ -1749,6 +1778,8 @@ input:checked + .checkbox-label {
     padding: 37px 40px 58px 40px;
     display: flex;
     justify-content: space-between;
+    gap: 60px 20px;
+    flex-wrap: wrap;
 }
 
 .footer__nav-wrapper {
@@ -1807,6 +1838,7 @@ input:checked + .checkbox-label {
 
 .footer-banner p{
     line-height: 130%;
+    text-align: center;
 }
 
 .footer__contacts-wrapper {
@@ -1852,4 +1884,178 @@ input:checked + .checkbox-label {
 
 .color-main {
     color: var(--main-color);
+}
+
+@media (max-width: 1600px) {
+    .advantages-section .flex-container,
+    .main-video-section .flex-container {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 1300px) {
+    .banner-section .container {
+        grid-template-columns: 1fr;
+    }
+    
+    .banner-section--reverse .container .banner-right {
+        order: 0;
+    }
+    .banner-left__bg {
+        max-width: 100%;
+    }
+    .banner-left {
+        padding: 40px 16px;
+    }
+    .banner-right img {
+        max-height: 400px;
+    }
+    .banner-left:has(.banner__payment-text-wrapper) {
+        padding-top: 70px;
+    }
+    .grid-wrapper--two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width: 1100px) {
+    .location-section .flex-container {
+        flex-wrap: wrap;
+    }
+    .about-video__wrapper {
+        min-height: auto;
+    }
+    .about-video__wrapper img {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        object-fit: cover;
+    }
+    .grid-wrapper--three-columns {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 878px) {
+    .container {
+        padding: 0 20px;
+    }
+    .small-banner {
+        flex-direction: column;
+        text-align: center;
+    }
+    .item-example__img-wrapper {
+        max-height: 300px;
+    }
+
+    .item-example__title {
+        padding: 20px 20px;
+    }
+    .title-wrapper--opacity h1 {
+        font-size: 30px;
+    }
+    .title {
+        font-size: 28px;
+    }
+    .banner-title {
+        font-size: 28px;
+    }
+    .subtitle {
+        font-size: 20px;
+    }
+    .small-banner-section .banner-title {
+        font-size: 20px;
+    }
+    .button {
+        padding: 26px 10px;
+    }
+
+    .advantages-section .flex-item {
+        height: 400px;
+        max-width: none;
+    }
+    .advantages-section .flex-item p {
+        min-height: auto;
+    }
+
+    .contacts-content__row > a {
+        font-size: 18px;
+    }
+
+    .news-card--large {
+        grid-column: span 1;
+    }
+
+    .news-section .grid-wrapper--four-columns {
+        grid-template-columns: 1fr;
+    }
+    
+}
+
+@media (max-width: 640px) {
+    .grid-wrapper--two-columns {
+        grid-template-columns: 1fr;
+    }
+    .grid-wrapper--three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-title {
+        min-width: auto;
+    }
+    .item-example__img-wrapper {
+        width: 100%;
+    }
+    .item-example__img-wrapper img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        object-fit: cover;
+    }
+    .contacts-phone-wrapper a {
+        font-size: 20px;
+    }
+    .contacts-phone-wrapper {
+        height: auto;
+        flex-direction: column;
+        gap: 2px;
+    }
+    .contacts-phone-wrapper .contacts-row__desc {
+        margin-top: 0px;
+    }
+    .contacts-card__title {
+        flex-wrap: wrap;
+        gap: 20px;
+        height: auto;
+    }
+    .contacts-card__title .button {
+        border-radius: 5px;
+    }
+    .grid-thin-card__description {
+        width: 100%;
+        height: auto;
+    }
+    .grid-thin-card__img-wrapper {
+        height: auto;
+        width: 100%;
+    }
+    .grid-thin-card__img-wrapper img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: bottom center;
+    }
+    .footer__contacts-wrapper,
+    .footer__nav-wrapper {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .footer-nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .grid-wrapper--four-columns {
+        grid-template-columns: 1fr;
+    }
+    .location__map-wrapper {
+        width: 100%;
+    }
 }
