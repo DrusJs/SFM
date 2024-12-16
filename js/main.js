@@ -18,3 +18,23 @@ if (dropdownItems.length > 0) {
         })
     })
 }
+
+const materialTab = document.querySelectorAll('.materials__tab')
+const materialTabConts = document.querySelectorAll('.materials-catalog-section .container')
+
+if (materialTab.length > 0) {
+    materialTab.forEach((el, index) => {
+        console.log(index)
+        el.addEventListener('click', (e) => {
+            if (!e.currentTarget.classList.contains('active')) {
+                const active = document.querySelector('.materials__tab.active')
+                const activeTab = document.querySelector('.materials-catalog-section .container.active')
+
+                if (active) { active.classList.remove('active') }
+                if (activeTab) { activeTab.classList.remove('active') }
+                e.currentTarget.classList.add('active')
+                materialTabConts[index].classList.add('active')
+            }
+        })
+    })
+}
