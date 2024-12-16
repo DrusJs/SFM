@@ -170,7 +170,32 @@ ul {
     font-family: var(--font-helveticaneuecyr);
     font-size: 18px;
     font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100px;
     line-height: 100%;      
+}
+
+.button svg {
+    width: 0;
+    height: 0;
+    margin-left: 0;
+    transition: 300ms ease-in-out;
+}
+
+.footer .button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button:hover svg {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+}
+.footer .button:hover svg {
+    margin-left: 0;
 }
 
 .social-button {
