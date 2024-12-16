@@ -2230,6 +2230,11 @@ section > .title-wrapper {
     .container {
         padding: 0 20px;
     }
+
+    .catalog-filter__wrapper {
+        display: none;
+    }
+
     .footer .container {
         padding: 30px 20px 50px;
     }
