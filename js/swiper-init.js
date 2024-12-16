@@ -47,3 +47,13 @@ const mainSwiper = new Swiper(".main-slider", {
 
   }
 });
+
+const newsSwiper = new Swiper(".content-slider", {
+    spaceBetween: 20,
+    slidesPerView: 'auto',
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev"
+    },
+});

@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+        
+        <link rel="stylesheet" href="css/nouislider.min.css">
         <link rel="stylesheet" href="css/style.css">
     
         <title>Дизайнерские кухни для вашего дома</title>
@@ -105,9 +106,158 @@
         <section class="catalog-category-section">
             <div class="container container--small">
                 <div class="catalog-filter__wrapper">
-                    <div class="input-wrapper">
-                        <input type="checkbox" class="checkbox-input" id="style1">
-                        <label for="style1" class="checkbox-label">Классика</label>
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Стиль</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>                              
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type1">
+                                <label for="type1" class="checkbox-label">Классика</label>
+                            </div>          
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type2" checked>
+                                <label for="type2" class="checkbox-label">Минимализм</label>
+                            </div>             
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type3">
+                                <label for="type3" class="checkbox-label">Лофт</label>
+                            </div>       
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type4">
+                                <label for="type4" class="checkbox-label">Индустриальный</label>
+                            </div>        
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type5" checked>
+                                <label for="type5" class="checkbox-label">Неоклассика</label>
+                            </div>         
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type6">
+                                <label for="type6" class="checkbox-label">Скандинавский</label>
+                            </div>         
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type7">
+                                <label for="type7" class="checkbox-label">Фьюжн</label>
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Цена, руб.</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                     
+                        </div>
+                    </div>
+
+                    
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Совмещенная с гостинной</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="input-wrapper">
+                                <input type="radio" name="connect-items" class="radio-input" id="type-radio1">
+                                <label for="type-radio1" class="radio-label">Да</label>
+                            </div>          
+                            <div class="input-wrapper">
+                                <input type="radio" name="connect-items" class="radio-input" id="type-radio2">
+                                <label for="type-radio2" class="radio-label">Нет</label>
+                            </div>                                  
+                        </div>
+                    </div>
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Материал корпуса</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type21">
+                                <label for="type21" class="checkbox-label">ЛДСП</label>
+                            </div>                                    
+                        </div>
+                    </div>
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Материал фасада</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type31">
+                                <label for="type31" class="checkbox-label">ДСП</label>
+                            </div>          
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type32" checked>
+                                <label for="type32" class="checkbox-label">МДФ</label>
+                            </div>             
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type33">
+                                <label for="type33" class="checkbox-label">Массив</label>
+                            </div>       
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type34">
+                                <label for="type34" class="checkbox-label">Стекло</label>
+                            </div>        
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type35" checked>
+                                <label for="type35" class="checkbox-label">Шпон</label>
+                            </div>                                
+                        </div>
+                    </div>
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Покрытие фасада</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type41">
+                                <label for="type41" class="checkbox-label">Глянцевое</label>
+                            </div>          
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type42">
+                                <label for="type42" class="checkbox-label">Матовое</label>
+                            </div>                                   
+                        </div>
+                    </div>
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Столешница цвет</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type51">
+                                <label for="type51" class="checkbox-label">Светлая</label>
+                            </div>          
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type52">
+                                <label for="type52" class="checkbox-label">Темная</label>
+                            </div>        
+                            <div class="input-wrapper">
+                                <input type="checkbox" class="checkbox-input" id="type53">
+                                <label for="type53" class="checkbox-label">Цветная</label>
+                            </div>                                      
+                        </div>
                     </div>
                 </div>
                 <div class="catalog-category__right">
@@ -343,5 +493,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
