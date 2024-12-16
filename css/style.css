@@ -377,15 +377,15 @@ input:checked + .checkbox-label {
 
 .main-slider, .main-content {
     width: 100%;
-    /* background-color: var(--accent-color); */
-    height: 50vw;
-    min-height: 500px;
+    height: calc(100vh - 40px);
+    min-height: 800px;
     border-radius: var(--border-radius-main);
     overflow: hidden;
-    background-image: url(../images/main-picture.png);
-    background-size: cover;
-    background-position: center center;
-    padding:  20px;
+    padding: 20px;
+}
+
+.main-slider {
+    padding: 0
 }
 
 @media (min-width: 1980px) {
@@ -494,7 +494,7 @@ input:checked + .checkbox-label {
     overflow: hidden;
     width: 100%;
     border-radius: var(--border-radius-main);
-    background-image: url(../images/video-bannerimg.png);
+    background-image: url(../images/video-bannerimg.webp);
     background-size: cover;
     padding: 30px 40px;
     display: flex;
@@ -1935,6 +1935,88 @@ input:checked + .checkbox-label {
     color: var(--main-color);
 }
 
+/* swiper */
+
+.autoplay-progress {
+    position: absolute;
+    right: 40px;
+    bottom: 40px;
+    z-index: 2;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+  }
+
+  .autoplay-progress svg.progress {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 0.5px;
+    stroke: var(--color-white);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+  }
+
+  .autoplay-progress svg.bg {
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    stroke-width: 0.5px;
+    stroke: rgba(255, 255, 255, 0.2);
+    fill: rgba(0, 0, 0, 0.45);
+  }
+
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    display: none;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    top: auto;
+    left: 40px;
+    bottom: 40px;
+    width: 25px;
+    height: 20px;
+  }
+  .swiper-button-next {
+    left: 80px;
+  }
+
+  .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper .current-slide {
+    font-family: var(--font-helveticaneuecyr);
+    font-size: 50px;
+    line-height: 100%;
+    position: relative;
+    z-index: 4;
+  }
+  .swiper .total-slide {
+    font-family: var(--font-helveticaneuecyr);
+    font-size: 18px;
+    line-height: 100%;
+    margin-top: 40px;
+    letter-spacing: 2px;
+    z-index: 4;
+  }
+
 @media (max-width: 1600px) {
     .advantages-section .flex-container,
     .main-video-section .flex-container {
@@ -2031,6 +2113,31 @@ input:checked + .checkbox-label {
         left: 0;
         transform: none;
         position: fixed;
+    }
+
+    .main-slider, .main-content {
+        min-height: 360px;
+        height: 50vw;
+    }
+
+    .autoplay-progress {
+        bottom: 10px;
+        right: 10px;
+        width: 110px;
+        height: 110px;
+    }
+
+    .swiper .current-slide {
+        font-size: 36px;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    .swiper-button-next {
+        left: 60px;
     }
 
     .header__buttons {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <link rel="stylesheet" href="css/swiper.min.css">
     <link rel="stylesheet" href="css/style.css">
 
     <title>Сосновская Фабрика Мебели</title>
@@ -95,7 +96,44 @@
                 <div class="title-wrapper" style="display: none;">
                     <h1 class="title">Сосновская Фабрика мебели</h1>
                 </div>
-                <div class="main-slider">
+                <div class="main-slider swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-active" data-ind="1">
+                            <img src="images/main-picture.webp" alt="Kitchen">
+                        </div>
+                        <div class="swiper-slide" data-ind="2">
+                            <img src="images/main-content-img2.webp" alt="Kitchen">
+                        </div>
+                        <div class="swiper-slide" data-ind="3">
+                            <img src="images/main-content-img6.webp" alt="Kitchen">
+                        </div>
+                        <div class="swiper-slide" data-ind="4">
+                            <img src="images/main-content-img9.webp" alt="Kitchen">
+                        </div>
+                        <div class="swiper-slide" data-ind="5">
+                            <img src="images/main-content-img10.webp" alt="Kitchen">
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10 0L11.75 1.75L4.75 8.75H25V11.25H4.75L11.75 18.25L10 20L0 10L10 0Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                    <div class="swiper-button-next">
+                        <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 0L13.25 1.75L20.25 8.75H0V11.25H20.25L13.25 18.25L15 20L25 10L15 0Z" fill="white"/>
+                        </svg>                            
+                    </div>
+                    <div class="autoplay-progress">
+                      <svg class="progress" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                      </svg>
+                      <svg class="bg" viewBox="0 0 48 48">
+                        <circle cx="24" cy="24" r="20"></circle>
+                      </svg>
+                      <span class="current-slide"></span>
+                      <span class="total-slide"></span>
+                    </div>
                 </div>
                 <div class="flex-container">
                     <div class="flex-item">
@@ -155,7 +193,7 @@
                     <h2 class="title">Видео про нас</h2>
                 </div>
                 <div class="about-video__wrapper">
-                    <img src="images/video-img.png" alt="Видео" width="1880" height="800">
+                    <img src="images/video-img.webp" alt="Видео" width="1880" height="800">
                 </div>
                 <div class="small-banner">
                     <h2 class="banner-title">Есть вопросы? Оставьте заявку</h2>
@@ -171,7 +209,7 @@
                 <div class="grid-wrapper grid-wrapper--two-columns">
                     <a href="#" class="grid-item grid-item-example-style">
                         <div class="item-example__img-wrapper">
-                            <img src="images/item-example1.png" alt="Пример" width="890" height="400">
+                            <img src="images/item-example1.webp" alt="Пример" width="890" height="400">
                         </div>
                         <div class="item-example__title">
                             <h3 class="subtitle">Кухни</h3>
@@ -180,7 +218,7 @@
                     </a>
                     <a href="#" class="grid-item grid-item-example-style">
                         <div class="item-example__img-wrapper">
-                            <img src="images/item-example2.png" alt="Пример" width="890 400">
+                            <img src="images/item-example2.webp" alt="Пример" width="890 400">
                         </div>
                         <div class="item-example__title">
                             <h3 class="subtitle">Шкафы</h3>
@@ -189,7 +227,7 @@
                     </a>
                     <a href="#" class="grid-item grid-item-example-style">
                         <div class="item-example__img-wrapper">
-                            <img src="images/item-example3.png" alt="Пример" width="890" >
+                            <img src="images/item-example3.webp" alt="Пример" width="890" >
                         </div>
                         <div class="item-example__title">
                             <h3 class="subtitle">Гостиные</h3>
@@ -198,7 +236,7 @@
                     </a>
                     <a href="#" class="grid-item grid-item-example-style">
                         <div class="item-example__img-wrapper">
-                            <img src="images/item-example4.png" alt="Пример" width="890" height="400">
+                            <img src="images/item-example4.webp" alt="Пример" width="890" height="400">
                         </div>
                         <div class="item-example__title">
                             <h3 class="subtitle">Гардеробные и прихожие</h3>
@@ -220,11 +258,11 @@
                     </div>
                     <div class="banner-left__bg">
                         <div class="banner-transparent-bg"></div>
-                        <img src="images/banner-left-bg.png" alt="Фон" width="940" height="800">
+                        <img src="images/banner-left-bg.webp" alt="Фон" width="940" height="800">
                     </div>
                 </div>
                 <div class="banner-right">
-                    <img src="images/banner-right.png" alt="Фон" width="940" height="800">
+                    <img src="images/banner-right.webp" alt="Фон" width="940" height="800">
                 </div>
             </div>
         </section>
@@ -238,28 +276,28 @@
                         <p class="subtitle">Индивидуальные решения с любыми доработками именно под ваш дом</p>
                         <div class="flex-item__bg">
                             <div class="flex-item__bg-trasparent"></div>
-                            <img src="images/advantages-img1.png" alt="Картинка" width="435" height="607">
+                            <img src="images/advantages-img1.webp" alt="Картинка" width="435" height="607">
                         </div>
                     </div>
                     <div class="flex-item">
                         <p class="subtitle">Современная фурнитура, обработка фасадов по технологии PUR/LASER</p>
                         <div class="flex-item__bg">
                             <div class="flex-item__bg-trasparent"></div>
-                            <img src="images/advantages-img2.png" alt="Картинка" width="435" height="607">
+                            <img src="images/advantages-img2.webp" alt="Картинка" width="435" height="607">
                         </div>
                     </div>
                     <div class="flex-item">
                         <p class="subtitle">Собственный монтаж с полным&nbsp;соблюдением деталей дизайн-проекта</p>
                         <div class="flex-item__bg">
                             <div class="flex-item__bg-trasparent"></div>
-                            <img src="images/advantages-img3.png" alt="Картинка" width="435" height="607">
+                            <img src="images/advantages-img3.webp" alt="Картинка" width="435" height="607">
                         </div>
                     </div>
                     <div class="flex-item">
                         <p class="subtitle">Гарантия сроков по каждому этапу в договоре</p>
                         <div class="flex-item__bg">
                             <div class="flex-item__bg-trasparent"></div>
-                            <img src="images/advantages-img1.png" alt="Картинка" width="435" height="607">
+                            <img src="images/advantages-img1.webp" alt="Картинка" width="435" height="607">
                         </div>
                     </div>
                 </div>
@@ -277,11 +315,11 @@
                     </div>
                     <div class="banner-left__bg">
                         <div class="banner-transparent-bg"></div>
-                        <img src="images/banner-left-bg2.png" alt="Фон" width="940" height="800">
+                        <img src="images/banner-left-bg2.webp" alt="Фон" width="940" height="800">
                     </div>
                 </div>
                 <div class="banner-right">
-                    <img src="images/banner-right2.png" alt="Фон" width="940" height="800">
+                    <img src="images/banner-right2.webp" alt="Фон" width="940" height="800">
                 </div>
             </div>
         </section>
@@ -308,7 +346,7 @@
                                 <p class="text-secondary">Золотой стандарт дизайнерской мебели. Обзор&nbsp;кухни, прихожей и гостиной</p>
                             </div>                                
                         </div>
-                        <img src="images/video-card-img.png" alt="Обложка Видео" class="video-card__img" width="586" height="400">
+                        <img src="images/video-card-img.webp" alt="Обложка Видео" class="video-card__img" width="586" height="400">
                     </button>
                     <button class="video-card">
                         <div class="video-card__player">
@@ -327,7 +365,7 @@
                                 <p class="text-secondary">Золотой стандарт дизайнерской мебели. Обзор&nbsp;кухни, прихожей и гостиной</p>
                             </div>                                
                         </div>
-                        <img src="images/video-card-img2.png" alt="Обложка Видео" class="video-card__img" width="586" height="400">
+                        <img src="images/video-card-img2.webp" alt="Обложка Видео" class="video-card__img" width="586" height="400">
                     </button>
                     <button class="video-card">
                         <div class="video-card__player">
@@ -346,7 +384,7 @@
                                 <p class="text-secondary">Золотой стандарт дизайнерской мебели. Обзор&nbsp;кухни, прихожей и гостиной</p>
                             </div>                                
                         </div>
-                        <img src="images/video-card-img3.png" alt="Обложка Видео" class="video-card__img" width="586" height="400">
+                        <img src="images/video-card-img3.webp" alt="Обложка Видео" class="video-card__img" width="586" height="400">
                     </button>
                 </div>
                 <a href="#" class="button">Больше видео</a>
@@ -375,10 +413,10 @@
                                 <span class="text-secondary">В Москве</span>                                    
                             </div>
                             <div class="location__map-wrapper">
-                                <img src="images/location-map.png" alt="Карта" width="870" height="161">
+                                <img src="images/location-map.webp" alt="Карта" width="870" height="161">
                             </div>
                         </div>
-                        <img src="images/location-img.png" alt="Картинка" class="location-bg" width="890" height="660">
+                        <img src="images/location-img.webp" alt="Картинка" class="location-bg" width="890" height="660">
                     </div>
                     <div class="location-card">
                         <div class="location-content">
@@ -397,10 +435,10 @@
                                 <span class="text-secondary">В Нижнем Новгороде</span>                                    
                             </div>
                             <div class="location__map-wrapper">
-                                <img src="images/location-map2.png" alt="Карта" width="870" height="161">
+                                <img src="images/location-map2.webp" alt="Карта" width="870" height="161">
                             </div>
                         </div>
-                        <img src="images/location-img2.png" alt="Картинка" class="location-bg" width="890" height="660">
+                        <img src="images/location-img2.webp" alt="Картинка" class="location-bg" width="890" height="660">
                     </div>
                 </div>
             </div>
@@ -514,5 +552,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper-init.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
