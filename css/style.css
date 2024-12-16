@@ -383,6 +383,8 @@ input:checked + .checkbox-label {
     border-radius: var(--border-radius-main);
     overflow: hidden;
     background-image: url(../images/main-picture.png);
+    background-size: cover;
+    background-position: center center;
     padding:  20px;
 }
 
@@ -427,9 +429,9 @@ input:checked + .checkbox-label {
     margin-top: 50px;
     max-width: 1800px;
     width: 100%;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
+    gap: 50px 20px;
     flex-wrap: wrap;
 }
 
@@ -655,7 +657,7 @@ input:checked + .checkbox-label {
     z-index: -1;
     top: 0;
     left: 0;
-    filter: brightness(80%);
+    filter: brightness(70%);
 }
 
 .advantages-section .flex-item__bg img {
@@ -746,6 +748,9 @@ input:checked + .checkbox-label {
     position: absolute;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .main-video-section .button, .other-news-section .button {
@@ -2086,6 +2091,12 @@ input:checked + .checkbox-label {
 
     .footer-banner {
         padding-bottom: 20px;
+    }
+    .advantages-section .flex-item {
+        padding: 30px 20px;
+    }
+    .video-card__description {
+        padding: 10px;
     }
 
     .banner-title {
