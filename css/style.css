@@ -603,6 +603,110 @@ section > .title-wrapper {
     
 }
 
+.noui-flex {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.noui-flex .input {
+    border: 1px solid #E6E6E6;
+    padding: 9px 10px;
+    text-align: center;
+    color: #595B56;
+    font-size: 14px;
+}
+
+.noUi-target {
+    border: none;
+    box-shadow: none;
+    padding: 0 10px;
+    margin-top: 10px;
+    background: #EBE1DC;
+}
+
+.noUi-connect {
+    background: #CDB3A4;
+}
+.noUi-handle::after, .noUi-handle::before {
+    display: none;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 16px;
+    height: 16px;
+    background: #CDB3A4;
+    border: none;
+    box-shadow: none;
+    border-radius: 16px;
+    right: -8px;
+    top: -7px;
+}
+
+.noUi-horizontal {
+    height: 2px;
+}
+
+.color-flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px 12px;
+    padding: 5px 2px;
+}
+
+.text-button-show {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-decoration: underline;
+    color: var(--accent-color);
+    font-family: var(--font-cerapro);
+    font-size: 14px;
+    margin-left: 3px;
+}
+
+.color-label {
+    width: 18px;
+    min-width: 18px;
+    display: block;
+    border-radius: 18px;
+    height: 18px;
+    transition: 200ms ease-in-out;
+    border: 0px solid transparent;
+    cursor: pointer;
+}
+
+.color-check {
+    display: none;
+}
+
+.color-flex .color-check:nth-child(1),
+.color-flex .color-check:nth-child(2),
+.color-flex .color-check:nth-child(3),
+.color-flex .color-check:nth-child(4),
+.color-flex .color-check:nth-child(5) {
+    display: block;
+}
+
+.text-button-show span:nth-child(2) {
+    display: none;
+}
+
+input:checked + .color-label {
+    border: 3px solid var(--color-white);
+}
+
+.color-flex.active .color-check {
+    display: block;
+}
+.color-flex.active .text-button-show span:nth-child(1) {
+    display: none;
+}
+.color-flex.active .text-button-show span:nth-child(2) {
+    display: block;
+}
+
 .grid-item-example-style:hover .item-example__title {
     background-color: var(--accent-color);
 }

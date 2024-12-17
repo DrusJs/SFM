@@ -152,11 +152,78 @@
                             </svg>   
                         </div>
                         <div class="catalog-filter-item-dropdown">
-                     
+                            <div class="noui-flex">
+                                <input type="text" class="input" id="event-start">
+                                <span>-</span>                                
+                                <input type="text" class="input" id="event-end">
+                            </div>
+                            <div id="slider-price"></div>
                         </div>
                     </div>
-
-                    
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Размер, м</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="noui-flex">
+                                <input type="text" class="input" id="event-start2">
+                                <span>-</span>                                
+                                <input type="text" class="input" id="event-end2">
+                            </div>
+                            <div id="slider-size"></div>
+                        </div>
+                    </div>  
+                    <div class="catalog-filter-item">
+                        <div class="catalog-filter-item-head">
+                            <span>Цветовая гамма</span>
+                            <svg width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.90225 0.931118C7.77192 0.800793 7.56126 0.800793 7.43093 0.931118L3.99999 4.36204L0.569062 0.931118C0.438737 0.800793 0.228069 0.800793 0.097744 0.931118C-0.0325813 1.06144 -0.0325813 1.27211 0.097744 1.40244L3.76434 5.06903C3.82934 5.13403 3.91466 5.1667 4 5.1667C4.08535 5.1667 4.17067 5.13403 4.23567 5.06903L7.90226 1.40244C8.03257 1.27211 8.03257 1.06144 7.90225 0.931118Z" fill="black"/>
+                            </svg>   
+                        </div>
+                        <div class="catalog-filter-item-dropdown">
+                            <div class="color-flex">
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr1" checked>
+                                    <label for="type-clr1" class="color-label" data-color="#E09999"></label>
+                                </div>
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr2">
+                                    <label for="type-clr2" class="color-label" data-color="#B3C384"></label>
+                                </div>
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr3">
+                                    <label for="type-clr3" class="color-label" data-color="#DBE099"></label>
+                                </div>
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr4">
+                                    <label for="type-clr4" class="color-label" data-color="#AEC7CE"></label>
+                                </div>
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr5">
+                                    <label for="type-clr5" class="color-label" data-color="#5890A1"></label>
+                                </div>
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr6">
+                                    <label for="type-clr6" class="color-label" data-color="#9A8173"></label>
+                                </div>
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr7">
+                                    <label for="type-clr7" class="color-label" data-color="#1E1E1E"></label>
+                                </div>
+                                <div class="color-check">
+                                    <input type="checkbox" class="checkbox-input" id="type-clr8">
+                                    <label for="type-clr8" class="color-label" data-color="#7C7144"></label>
+                                </div>
+                                <button class="text-button-show">
+                                    <span>+3</span>
+                                    <span>Скрыть</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>                   
                     <div class="catalog-filter-item">
                         <div class="catalog-filter-item-head">
                             <span>Совмещенная с гостинной</span>
@@ -496,5 +563,55 @@
 
     <script src="js/nouislider.min.js"></script>
     <script src="js/main.js"></script>
+
+    <script>        
+        const priceSlider = document.getElementById('slider-price');
+
+        noUiSlider.create(priceSlider, {
+            range: {
+                min: 810000,
+                max: 9142000
+            },
+            step: 100,
+
+            start: [810000, 9142000],
+            connect: true,
+        });
+        
+
+        const dateValues = [
+            document.getElementById('event-start'),
+            document.getElementById('event-end')
+        ];
+
+
+        priceSlider.noUiSlider.on('update', function (values, handle) {
+            dateValues[handle].value = +values[handle];
+        });
+        
+        const sizeSlider = document.getElementById('slider-size');
+
+        noUiSlider.create(sizeSlider, {
+            range: {
+                min: 1,
+                max: 40
+            },
+            step: 1,
+
+            start: [6, 39],
+            connect: true,
+        });
+        
+
+        const dateValues2 = [
+            document.getElementById('event-start2'),
+            document.getElementById('event-end2')
+        ];
+
+
+        sizeSlider.noUiSlider.on('update', function (values, handle) {
+            dateValues2[handle].value = +values[handle];
+        });
+    </script>
 </body>
 </html>
