@@ -2,8 +2,9 @@
 <html lang="ru">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     
+        <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/style.css">
     
         <title>Фрезерованный фасад МДФ</title>
@@ -99,7 +100,60 @@
                         <span class="text-primary">Обратите внимание на качество покраски - строго 2 слоя эмали и лака</span>
                     </div>
                     <div class="main-content-bg">
-                        <img src="images/main-content-img3.webp" alt="Картинка" class="main-content__img" width="1880" height="980">
+                        <div class="main-slider swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide swiper-slide-active" data-ind="1">
+                                    <img src="images/main-picture.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="2">
+                                    <img src="images/main-content-img2.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="3">
+                                    <img src="images/main-content-img6.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="4">
+                                    <img src="images/main-content-img9.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="5">
+                                    <img src="images/main-content-img10.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide swiper-slide-active" data-ind="1">
+                                    <img src="images/main-picture.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="2">
+                                    <img src="images/main-content-img2.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="3">
+                                    <img src="images/main-content-img6.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="4">
+                                    <img src="images/main-content-img9.webp" alt="Kitchen">
+                                </div>
+                                <div class="swiper-slide" data-ind="5">
+                                    <img src="images/main-content-img10.webp" alt="Kitchen">
+                                </div>
+                            </div>
+                            <div class="swiper-button-prev">
+                                <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 0L11.75 1.75L4.75 8.75H25V11.25H4.75L11.75 18.25L10 20L0 10L10 0Z" fill="white"/>
+                                </svg>                            
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="25" height="20" viewBox="0 0 25 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 0L13.25 1.75L20.25 8.75H0V11.25H20.25L13.25 18.25L15 20L25 10L15 0Z" fill="white"/>
+                                </svg>                            
+                            </div>
+                            <div class="autoplay-progress">
+                              <svg class="progress" viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="20"></circle>
+                              </svg>
+                              <svg class="bg" viewBox="0 0 48 48">
+                                <circle cx="24" cy="24" r="20"></circle>
+                              </svg>
+                              <span class="current-slide"></span>
+                              <span class="total-slide"></span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -310,5 +364,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/swiper-init.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
