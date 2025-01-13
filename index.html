@@ -6,6 +6,7 @@
 
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
 
+    <link rel="stylesheet" href="css/fancybox.css">
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
@@ -420,14 +421,14 @@
           <div class="title-wrapper">
             <h2 class="title">Видео про нас</h2>
           </div>
-          <div class="about-video__wrapper" data-modal="video-modal" style="cursor: pointer;">
+          <a class="about-video__wrapper" href="images/sample-5s.mp4" data-fancybox style="cursor: pointer;">
             <img
               src="images/video-img.webp"
               alt="Видео"
               width="1880"
               height="800"
             />
-          </div>
+          </a>
           <div class="small-banner">
             <h2 class="banner-title">Есть вопросы? Оставьте заявку</h2>
             <button class="button" data-modal="feedback-modal">
@@ -726,7 +727,7 @@
             <h2 class="title">16 лет на рынке - рассказываем все как есть</h2>
           </div>
           <div class="flex-container">
-            <button class="video-card" data-modal="video-modal" style="cursor: pointer;">
+            <a class="video-card" href="images/sample-5s.mp4" data-fancybox="video-gallery" style="cursor: pointer;">
               <div class="video-card__player">
                 <svg
                   width="86"
@@ -769,8 +770,8 @@
                 width="586"
                 height="400"
               />
-            </button>
-            <button class="video-card" data-modal="video-modal" style="cursor: pointer;">
+            </a>
+            <a class="video-card" href="images/sample-5s.mp4" data-fancybox="video-gallery" style="cursor: pointer;">
               <div class="video-card__player">
                 <svg
                   width="86"
@@ -813,8 +814,8 @@
                 width="586"
                 height="400"
               />
-            </button>
-            <button class="video-card" data-modal="video-modal" style="cursor: pointer;">
+            </a>
+            <a class="video-card" href="images/sample-5s.mp4" data-fancybox="video-gallery" style="cursor: pointer;">
               <div class="video-card__player">
                 <svg
                   width="86"
@@ -857,7 +858,7 @@
                 width="586"
                 height="400"
               />
-            </button>
+            </a>
           </div>
           <a href="#" class="button">Больше видео</a>
         </div>
@@ -1319,6 +1320,7 @@
       </div>
     </div>
 
+    <script src="js/fancybox.umd.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/swiper-init.js"></script>
     <script src="js/main.js"></script>

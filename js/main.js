@@ -158,3 +158,5 @@ document.querySelectorAll('.modal-wrapper').forEach(modal =>{
         }
     })
 })
+
+Fancybox.bind("[data-fancybox]", {});

@@ -6,6 +6,7 @@
 
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     
+        <link rel="stylesheet" href="css/fancybox.css">
         <link rel="stylesheet" href="css/swiper.min.css">
         <link rel="stylesheet" href="css/style.css">
     
@@ -269,7 +270,7 @@
                 <div class="title-wrapper">
                     <h2 class="title">Лучше один раз увидеть, чем сто раз прочитать</h2>
                 </div>
-                <div class="materials-video__wrapper" data-modal="video-modal" style="cursor: pointer;">
+                <a class="materials-video__wrapper" href="images/sample-5s.mp4" data-fancybox="video-gallery" style="cursor: pointer;">
                     <div class="materials-video__player">
                         <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle opacity="0.8" cx="60" cy="60" r="60" fill="#1E1E1E"/>
@@ -289,7 +290,7 @@
                     <div class="materials-video__bg">
                         <img src="images/product-card-video-cover.webp" class="materials-video__cover" alt="Обложка" width="1880" height="1063">
                     </div>
-                </div>
+                </a>
             </div>
         </section>
         <section class="banner-section banner-section--reverse banner-section--productcard">
@@ -640,30 +641,7 @@
         </div>
     </div>
 
-    <div class="modal-wrapper" id="video-modal">
-        <div class="modal video-flex">
-          <button class="modal-close">
-            <svg
-              width="29"
-              height="29"
-              viewBox="0 0 29 29"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                fill-rule="evenodd"
-                clip-rule="evenodd"
-                d="M24.7527 4.24728C30.4151 9.90969 30.4154 19.0905 24.7527 24.7532C19.0903 30.4156 9.90949 30.4156 4.24676 24.7529C-1.41564 19.0901 -1.41564 9.90969 4.24708 4.24728C9.90949 -1.41546 19.0903 -1.41546 24.7527 4.24728ZM18.6788 17.6098L15.5687 14.5001L18.6788 11.39C19.3825 10.6862 18.3134 9.61744 17.61 10.3212L14.4999 13.4313L11.3898 10.3212C10.6861 9.61744 9.61724 10.6866 10.3207 11.39L13.4311 14.5001L10.321 17.6098C9.61724 18.3136 10.6864 19.3824 11.3901 18.6786L14.4999 15.5689L17.61 18.679C18.3134 19.3824 19.3825 18.3136 18.6788 17.6098ZM27.488 14.5001C27.488 7.32676 21.6732 1.51193 14.4999 1.51193C7.32688 1.51193 1.51175 7.32708 1.51175 14.5001C1.51175 21.6734 7.32656 27.4882 14.4999 27.4882C21.6729 27.4882 27.488 21.6731 27.488 14.5001Z"
-                fill="white"
-              />
-            </svg>
-          </button>
-          <div class="modal-video">
-            <video src="images/sample-5s.mp4" controls muted></video>
-          </div>
-        </div>
-      </div>
-
+    <script src="js/fancybox.umd.js"></script>
     <script src="js/swiper.min.js"></script>
     <script src="js/swiper-init.js"></script>
     <script src="js/main.js"></script>
