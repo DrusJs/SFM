@@ -188,6 +188,20 @@ ul {
     width: 24px;
     height: 24px;
 }
+.button.show-filter {
+    width: 100%;
+    max-width: none;
+}
+.button.show-filter svg,
+.button.show-filter:hover svg {
+    width: 16px;
+    height: 16px;    
+    margin-left: 8px;
+}
+
+.accept-filter {
+    display: none;
+}
 
 .button:hover svg {
     width: 24px;
@@ -212,6 +226,10 @@ ul {
 
 .social-button:hover {
     background-color: var(--accent-color);
+}
+
+.mobile-filter {
+    display: none;
 }
 
 .pagination {
@@ -2485,17 +2503,34 @@ input:checked + .color-label {
         display: flex;
     }
 
+    
+
     .header__buttons {
         margin-left: auto;
     }
 
     .header__nav {
         position: fixed;
-        top: 140px;
+        top: 70px;
         right: 0px;
         overflow: hidden;
         width: 0px;
+        max-width: 0px;
         pointer-events: none;
+        flex-direction: column;
+        gap: 30px;
+        background-color: var(--main-color);
+        backdrop-filter: blur(40px);
+        border-radius: 0 0 20px 20px;
+        transition: 400ms ease-in-out;
+        padding: 40px 0px;
+    }
+
+    .header__nav.active {
+        width: 340px;
+        max-width: 340px;
+        pointer-events: all;
+        padding: 40px 30px;
     }
     
     .banner-section--reverse .container .banner-right {
@@ -2566,6 +2601,20 @@ input:checked + .color-label {
     .container {
         padding: 0 20px;
     }
+    .mobile-filter {
+        display: block;
+    }
+    .accept-filter {
+        display: block;
+        margin-top: 20px;
+    }
+    .catalog-category-section .container {
+        flex-direction: column;
+    }
+    .main-section--productcard .title-wrapper{
+        right: 0;
+        margin-top: -200px;
+    }
     .modal-picture {
         display: none;
     }
@@ -2590,7 +2639,24 @@ input:checked + .color-label {
     }
 
     .catalog-filter__wrapper {
-        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0;
+        max-width: 0;
+        transition: 400ms ease-in-out;
+        overflow: hidden;
+        max-height: 100dvh;
+        overflow: auto;
+        z-index: 20;
+        padding: 30px 0;
+        background-color: #EBE6E3;
+    }
+
+    .catalog-filter__wrapper.active {
+        width: 300px;
+        max-width: 300px;
+        padding: 30px 30px;
     }
 
     .footer .container {
@@ -2772,6 +2838,10 @@ input:checked + .color-label {
     .grid-wrapper--two-columns {
         grid-template-columns: 1fr;
     }
+    .header__nav.active {
+        width: 100%;
+        max-width: 100%;
+    } 
     .grid-wrapper--three-columns {
         grid-template-columns: 1fr;
     }

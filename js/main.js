@@ -1,3 +1,26 @@
+const burgerButton = document.querySelector('.burger-button')
+const nav = document.querySelector('.header__nav')
+
+if (burgerButton && nav) {
+    burgerButton.addEventListener("click", () => {
+        burgerButton.classList.toggle('active')
+        nav.classList.toggle('active')
+    })
+}
+
+const filterWrapper = document.querySelector('.catalog-filter__wrapper')
+const showFilter = document.querySelector('.show-filter')
+const acceptFilter = document.querySelector('.accept-filter')
+
+if (showFilter && acceptFilter && filterWrapper) {
+    showFilter.addEventListener('click', ()=>{
+        filterWrapper.classList.add('active')
+    })
+    acceptFilter.addEventListener('click', ()=>{
+        filterWrapper.classList.remove('active')
+    })
+}
+
 const dropdownItems = document.querySelectorAll('.catalog-filter-item')
 
 if (dropdownItems.length > 0) {
